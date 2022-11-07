@@ -1,0 +1,30 @@
+import java.util.*;
+
+class Solution
+{
+    static void toh(int n,char s, char inter, char d)
+    {
+        if(n==1)
+            System.out.println("Disk "+n+" moved from "+s+" to "+d);
+        else
+        {
+            toh(n-1,s,d,inter);
+            System.out.println("Disk "+n+" moved from "+s+" to "+d);
+            toh(n-1,inter,s,d);
+           // Disk 1 moved from A to C
+            
+            
+        }
+    }
+    public static void main(String args[])
+    {
+        Scanner in = new Scanner(System.in);
+        int n=in.nextInt();
+        toh(n,'A','B','C');
+    }
+}
+ 
+         
+                 
+                 
+ 
